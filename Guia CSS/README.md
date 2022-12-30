@@ -7,8 +7,8 @@ HTML:
 ```
 CSS:
 ```CSS:
- h1{}
- ```
+h1{}
+```
 
 ## Classes selectors
 HTML: 
@@ -48,13 +48,13 @@ CSS:
 ## Pseudo Attributes
 CSS:
 ```CSS
- input:focus{} // Quando o elemento está em foco, campos de texto por exemplo
+ input:focus{} /* Quando o elemento está em foco, campos de texto por exemplo */
 
- p:hover {} // Descansando o mouse em cima
+ p:hover {} /* Descansando o mouse em cima */
 
- input:disabled {} // Quando desabilitamos um campo
+ input:disabled {} /* Quando desabilitamos um campo */
 
- input:required {} // Quando o input é requerido
+ input:required {} /* Quando o input é requerido */
 ```
 
 ## combinators
