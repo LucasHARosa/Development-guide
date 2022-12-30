@@ -1,48 +1,57 @@
 # Seletores:
 
 ## Element type selector
-HTML: <h1></h1>
-CSS: h1{}
+HTML:
+```HTML:<h1></h1>```
+CSS:```CSS: h1{}```
 
 ## Classes selectors
-HTML: <div class="t1 title"> titulo </div>
-HTML: <div class="t2 title"> titulo </div>
-CSS: .title {}
-CSS: .t1 {}
-CSS: .t2 {}
+HTML: 
+```HTML<div class="t1 title"> titulo </div>```
+HTML: 
+```HTML:<div class="t2 title"> titulo </div>```
+CSS:```CSS .title {}```
+CSS:```CSS .t1 {}```
+CSS:```CSS .t2 {}```
 
 ## ID Selector
-HTML: <div class="title" id="my-1"> titulo </div>
-CSS: #my-1 {}
+HTML: 
+```HTML:<div class="title" id="my-1"> titulo </div>```
+CSS:```CSS #my-1 {}```
 
 ## Attributes selectors
-HTML: <div class="title" id="my-2" title="algo"> titulo </div>
-CSS: [title] {}
+HTML: 
+```HTML:<div class="title" id="my-2" title="algo"> titulo </div>```
+CSS:```CSS [title] {}```
 
 ## Pseudo Attributes
-CSS: input:focus{} // Quando o elemento está em foco, campos de texto por exemplo
-CSS: p:hover {} // Descansando o mouse em cima
-CSS: input:disabled {} // Quando desabilitamos um campo
-CSS: input:required {} // Quando o input é requerido
+CSS:```CSS input:focus{} // Quando o elemento está em foco, campos de texto por exemplo```
+CSS:```CSS p:hover {} // Descansando o mouse em cima```
+CSS:```CSS input:disabled {} // Quando desabilitamos um campo```
+CSS:```CSS input:required {} // Quando o input é requerido```
 
 ## combinators
-HTML: <body> <article> <h1> TEXTO </h1> </article> </body>
-CSS: body article h1 {}
+HTML: 
+```HTML:<body> <article> <h1> TEXTO </h1> </article> </body>```
+CSS:```CSS body article h1 {}```
 
 ## child combinators
 Seleciona só o filho direto do pai
-HTML: <body> <article> <h1> TEXTO </h1> </article> </body>
-CSS: body > article > h1 {}
+HTML: 
+```HTML:<body> <article> <h1> TEXTO </h1> </article> </body>```
+CSS:```CSS body > article > h1 {}```
 
 ## Adjacent sibling combinators
 Seleciona o elemento que é irmão na hierarquia
-HTML: <h1>TEXTO</h1> <p>TEXTO</p> <p>TEXTO</p> <p>TEXTO</p>
-CSS: h1 + p {}
+HTML: 
+```HTML:<h1>TEXTO</h1> <p>TEXTO</p> <p>TEXTO</p> <p>TEXTO</p>```
+CSS:```CSS h1 + p {}```
 
 ## General sibling combinators
 Seleciona todos os elementos irmãos
-HTML: <h1>TEXTO</h1> <p>TEXTO</p> <p>TEXTO</p> <p>TEXTO</p>
-CSS: h1 ~ p {}
+HTML: 
+```HTML:<h1>TEXTO</h1> <p>TEXTO</p> <p>TEXTO</p> <p>TEXTO</p>```
+CSS:```CSS h1 ~ p {}```
 
 ## Pseudo Classes
 
