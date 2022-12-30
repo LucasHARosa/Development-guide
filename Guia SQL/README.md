@@ -1,14 +1,18 @@
-# Comando: Selecionar colunas
+# Comandos
+## Comando: SELECT
+###  Selecionar colunas
 SELECT (Nome(s) da(s) coluna(s) ou * seleciona todas as colunas)
 FROM (nome da tabela)
 
 
-# Comando: DISTINCT Remover duplicados de colunas (distinct)
+## Comando: DISTINCT 
+### Remover duplicados de colunas (distinct)
 SELECT  DISTINCT () (Nome da coluna ou * seleciona todas as colunas)
 FROM (nome da tabela)
 
 
-# Comando: WHERE Operador lógico
+## Comando: WHERE 
+### Operador lógico
 SELECT (Nome da coluna ou * seleciona todas as colunas)
 FROM (nome da tabela)
 WHERE //Condição lógica // (nome da coluna) (operador) (valor) AND/OR (nome da coluna) (operador) (valor)
@@ -23,66 +27,76 @@ WHERE //Condição lógica // (nome da coluna) (operador) (valor) AND/OR (nome d
 	OR	Ou lógico
 
 
-# Comando: COUNT Contagem de linhas na tabela
+## Comando: COUNT 
+### Contagem de linhas na tabela
 SELECT  COUNT ( * ou nome da coluna ) (* para todas linhas, O DISTINCT pode ser usado)
 FROM (nome da tabela)
 
 
-# Comando: TOP Pega o topo de linhas de uma tabela
+## Comando: TOP 
+### Pega o topo de linhas de uma tabela
 SELECT  TOP número inteiro (Nome da coluna ou * seleciona todas as colunas)
 FROM (nome da tabela)
 
 
-# Comando: ORDER BY Ordena a tabela de forma crescente ou decrescente em relação a uma coluna
+## Comando: ORDER BY 
+### Ordena a tabela de forma crescente ou decrescente em relação a uma coluna
 SELECT  (Nome da coluna ou * seleciona todas as colunas)
 FROM (nome da tabela)
 ORDER BY (nome da coluna) asc/desc
 ORDER BY (nome da coluna) asc/desc, (nome da coluna) asc/desc
 
 
-# Comando: BETWEEN Pega valores entre faixas de valores
+## Comando: BETWEEN 
+### Pega valores entre faixas de valores
 SELECT  (Nome da coluna ou * seleciona todas as colunas)
 FROM (nome da tabela)
 WHERE (coluna desejada) (Pode existir o operador lógico NOT) BETWEEN número and número;
 
 
-# Comando: IN Separa valores iguais aos informados
+## Comando: IN 
+### Separa valores iguais aos informados
 SELECT  (Nome da coluna ou * seleciona todas as colunas)
 FROM (nome da tabela)
 WHERE (coluna desejada) (Pode existir o operador lógico NOT) IN (valor, valor, valor);
 
 
-# Comando: LIKE Busca valores dado um valor incompleto
+## Comando: LIKE 
+### Busca valores dado um valor incompleto
 SELECT  (Nome da coluna ou * seleciona todas as colunas)
 FROM (nome da tabela)
 WHERE (coluna desejada) (Pode existir o operador lógico NOT) like ‘%valor incompleto%' 
 
 (O ‘%’ pode vir antes ou depois, isso significa que a linguagem irá completar com quantos caracteres forem precisos. Se houver somente 1 caracter faltando podemos usar underline _)
 
-# Comando IS NULL e IS NOT NULL, pega os valore nulos
+## Comando IS NULL e IS NOT NULL
+### pega os valore nulos
 SELECT (Nome da coluna ou * seleciona todas as colunas)
 FROM (nome da tabela)
 WHERE (nome da coluna) IS NULL
 
-# Comando:  SUM MAX MIN AVG Funções matemáticas (soma, valor máximo, valor mínimo, média)
+## Comando:  SUM MAX MIN AVG 
+### Funções matemáticas (soma, valor máximo, valor mínimo, média)
 SELECT SUM ((Nome da coluna)) AS “Nome da coluna”
 FROM (nome da tabela)
 
 
-# Comando:  GROUP BY Divide o resultado da pesquisa por meio de grupos, agrupando eles, como por exemplo: somar itens de um mesmo tipo.
+## Comando:  GROUP BY 
+### Divide o resultado da pesquisa por meio de grupos, agrupando eles, como por exemplo: somar itens de um mesmo tipo.
 SELECT coluna1, Função de agregamento(coluna2)
 FROM (nome da tabela)
 GROUP BY coluna1
 
 
-# Comando:  HAVING Usado junto ao group by para filtrar os dados agrupados, similar ao where
+## Comando:  HAVING 
+### Usado junto ao group by para filtrar os dados agrupados, similar ao where
 SELECT coluna1, Função de agregamento(coluna2)
 FROM (nome da tabela)
 GROUP BY coluna1
 HAVING  (condição)
 
 
-# JOIN
+### JOIN
 
 ## Comando:  INNER JOIN - PROCV do SQL
 SELECT (colunas desejadas para consulta ou * ) ex: p.nomeDaColuna, onde p é a abreviação do datasheet.
@@ -95,7 +109,8 @@ FROM Person.Address pa
 INNER JOIN person.StateProvince ps on pa.StateProvinceID = ps.StateProvinceID
 WHERE ps.Name = 'Alberta'
 
-## Comando:  FULL OUTER JOIN Junta todas as informações e coloca null onde não há correspondência
+## Comando:  FULL OUTER JOIN 
+### Junta todas as informações e coloca null onde não há correspondência
 SELECT (colunas desejadas para consulta ou * )
 FROM (nome da tabela A) as A
 FULL OUTER JOIN (nome da tabela B) B on A.coluna_relacional1 = B.coluna_relacional2
@@ -176,27 +191,31 @@ DEFAULT - Força um valor padrão quando nenhum valor é passado
 
 
 
-## Comando: INSERT INTO Colocar valores na tabela
+## Comando: INSERT INTO 
+### Colocar valores na tabela
 INSERT INTO (nome da tabela) (coluna1, coluna2, …)
 VALUES ("1 dado coluna 1", 1 dado coluna 2)
 VALUES ("2 dado coluna 1", 2 dado coluna 2)
 …
  
 
-## Comando: UPDATE Muda valores na tabela, coluna
+## Comando: UPDATE 
+### Muda valores na tabela, coluna
 UPDATE (nome da tabela)
 SET 	(coluna1) = (valor1)
 		(coluna2) = (valor2)
 WHERE (condição)
 
 
-## Comando: DELETE Deleta linhas 
+## Comando: DELETE 
+### Deleta linhas 
 DELETE FROM (nome da tabela)
 WHERE (condição)
 WHERE (nome da coluna) = ‘nome’
 
 
-## Comando: ALTER TABLE Altera tabela:
+## Comando: ALTER TABLE 
+### Altera tabela:
 Adicionar, remover ou alterar coluna
 Setar valores padrões para uma coluna
 Add ou remover restrições de colunas
@@ -211,11 +230,14 @@ EXEX sp_RENAME ‘nometabela.nomecolunaatual’,’nomecolunanova’,’COLUMN�
 
 
 
-## Comando: DROP TABLE Deleta tabelas 
+## Comando: DROP TABLE
+### Deleta tabelas 
 DROP TABLE (nome da tabela)
 
 
-## Comando: TRUNCATE TABLE Deleta dados da tabela 
+## Comando: TRUNCATE TABLE 
+### Deleta tabelas 
+Deleta dados da tabela 
 TRUNCATE TABLE (nome da tabela)
 
 
