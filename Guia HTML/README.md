@@ -80,33 +80,36 @@
 
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
 ```
-<!--
-    Caracteres especiais:
-        &nbsp;: indica espaço
+# Caracteres
+## Caracteres especiais:
+    &nbsp;: indica espaço
 
-    Caracteres reservados:
-        < : &lt;
-        > : &gt;
-        "" :  &quot;
-        & : &amp;
-        '' : &apos;
--->
+## Caracteres reservados:
+    < : &lt;
+    > : &gt;
+    "" :  &quot;
+    & : &amp;
+    '' : &apos;
+
+```HTML
 <p>
     Alguns Caracteres especiais: &lt; &nbsp; &amp; &nbsp;  &gt; &nbsp; &nbsp; &apos; &apos;
     
 </p>
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
-<!--
-    Lista não ordenada
+```
+# Listas
+## Lista não ordenada
     <ul>
         <li></li>
     </ul>
 
-    Lista ordenada
+## Lista ordenada
     <ol>
         <li></li>
     </ol>
--->
+
+```HTML
 <h2 id="atalhos">Lista de Atalhos:</h2>
     <ol>
         <li>ctrl + r atualiza a página</li>
@@ -114,14 +117,16 @@
         <li>! cria uma página html no vscode</li>
     </ol>
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
-<!--
-    Citações:
+```
+
+
+# Citações:
     <blockquote cite=""></blockquote>: externas
     <cite></cite>: citar páginas
     <q cite=""></q>: citações curtas
 
--->    
-
+  
+```HTML
 <h2>Citações</h2>
 <blockquote cite="https://mail.google.com/mail/u/0/#inbox">(Indica que um texto externo foi citado)</blockquote>
 
@@ -129,17 +134,20 @@
 
 <q cite="https://mail.google.com/mail/u/0/#inbox">Iguail o blockquote mas esse é para citações curtas</q>
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
-<!--
-    Abreviações
-        <abbr title=""></abbr>: Usado para explicar abreviações
--->
+```
+
+# Abreviações
+    <abbr title=""></abbr>: Usado para explicar abreviações
+
+```HTML
 <h2>Abreviação</h2>
 <p>Usamos o <abbr title="Hypertext Markup Language ">HTML</abbr> para estruturar paginas web. Passe o mouse em cima do <abbr title="Hypertext Markup Language ">HTML</abbr></p>
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
-<!--
-    Endereço:
-        <address></address>: Indica endereço
--->
+```
+
+# Endereço:
+    <address></address>: Indica endereço
+```HTML
 <h2>Endereço</h2>
 <address>
     <p>Lucas Rosa
@@ -150,14 +158,15 @@
     </p>
 </address>
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
-<!--
-    Lista de descrições:
+```
+
+# Lista de descrições:
     <dl>
         <dt></dt>
         <dd></dd>
     </dl>   
--->
 
+```HTML
 <h2>Descrição</h2>
 <dl>
     <dt>HTML</dt>
@@ -168,12 +177,13 @@
 </dl>
 
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
-<!--Códigos:
+```
+# Códigos:
     
-        <pre>: deixa os espaços vazios preservados no texto
-            <code></code>: blocos de código genéricos
-        </pre>
--->
+    <pre>: deixa os espaços vazios preservados no texto
+        <code></code>: blocos de código genéricos
+    </pre>
+```HTML
 <h2>Trecho de Código</h2>
 <pre>
     <code>            
@@ -183,7 +193,8 @@
     </code>
 </pre>
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
-<!--Tabelas estrutura:
+```
+# Tabelas estrutura:
 
     <caption>: Nome da tabela
     <thead>: Cabeçalho do texto
@@ -196,7 +207,7 @@
     colspan="Número": ocupa colunas
     span="Número": ocupa grupos
     scope="colgroup""col""row""rowgroup": O escopo identifica o tipo do cabeçalho
--->
+```HTML
 <h2>Tabela</h2>
 <table>
     <caption><h3>Pessoas por idade</h3></caption>
@@ -228,10 +239,11 @@
     </tfoot>
 </table>
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
-<!--Midia:
+```
+# Midia:
     
 
-    Vídeo:
+## Vídeo:
 
     Atributos:
         controls: coloca controles no video
@@ -242,19 +254,19 @@
         loop: assim que acabar o video ele começa de novo
         poster="": coloca uma capa para o video
 
-    Audio:
+## Audio:
 
     Atributos: 
         controls: coloca controles no audio
     
-    Iframe:
+## Iframe:
 
     Atributos:
         frameborder="": borda do vídeo
         allow="": ferramentas do reprodutor de vídeos
         allowfullscreen: full screen
 
-    Imagem:
+## Imagem:
 
     Atributos:
         alt="": texto de acessibilidade
@@ -268,8 +280,8 @@
 
         
 
--->
-<!-- Exemplos de cada mídia:
+
+```HTML
 
 <h2>Midias</h2>
 <video 
@@ -311,10 +323,9 @@
     </a>
     <figcaption>Imagem de um leão</figcaption>
 </figure>
--->
+```
 
-<!--
-    Input:
+# Input:
 
     Atributos:
     - type="": Determina o tipo de dado que será recebido
@@ -355,11 +366,11 @@
     - aria-label="": Um label que fica escondido
     - min/max="": Número minimo e máximo que pode ser colocado "number"
 
--->
 
 
-<!--
-    Formulário:
+
+
+# Formulário:
         - <form action=""></form>
 
         Atributos básicos:
@@ -403,8 +414,8 @@
         - <option value="">banana</option>: Coloca as opções
         - <input type="" list="fruta">: Faz a ligação do input com a lista atrávez do atributo list
     
--->
 
+```HTML
 <h2>Formulário</h2>
 <form action="" id="forms1">
     <fieldset form="" name="">
