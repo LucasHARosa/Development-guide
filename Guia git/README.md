@@ -38,3 +38,15 @@
 - Mostra as alterações que ocorreram em algum ponto do projeto
 # git show <HASH> -- <pasta>/<pasta>/*
 - Mostra as alterações que ocorreram em algum ponto do projeto dentro de uma pasta
+
+# github
+## git branch -M main
+- Trocar o nome de master para main
+## git remote add origin git@github.com:LucasHARosa/Development_guide.git
+- Criando a conexão do github com minha máquina através do ssh
+## git push -u origin main 
+- Enviando o commit da máquina para o github pela primeira vez
+## git push
+- Quando já existe a branch main
+## git pull
+- Puxando alterações do repositório para a máquina 
