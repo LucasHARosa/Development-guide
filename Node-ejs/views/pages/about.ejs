@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<%- include('../partials/head'); %>
+<body class="container">
+    <!--Forma de passar um objeto para uma página assim que puxar ela-->
+    <%- include('../partials/header', {pagina: 'Sobre'}); %>
+    <main>
+        <div class="jumbotron" >
+            <h1>Sobre mim</h1>
+            <p>Meu nome é lucas henrique e estou aprendendo sobre EJS</p>
+        </div>
+    </main>
+    <%- include('../partials/footer'); %>
+</body>
+</html>

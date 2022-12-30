@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--Forma de puxar uma outra página para um html com ejs-->
+<%- include('../partials/head'); %>
+<body class="container">
+    
+    <%- include('../partials/header'); %>
+    <main >
+        <div class="jumbotron" >
+            <h1>Node com EJS</h1>
+            <p>Vamos aprender a trabalhar com arquivos EJS</p>
+            <p><%= subtitle%></p>
+        </div>
+        <ul>
+            <% objetos.forEach(function (objeto){ %>
+                <li>
+                    <strong><%= objeto.id %></strong><%= objeto.name %>
+                </li>
+            <% }) %>
+            
+            
+        </ul>
+    </main>
+    <%- include('../partials/footer'); %>
+</body>
+</html>
