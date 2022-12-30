@@ -14,21 +14,14 @@ CSS:
 HTML: 
 ```HTML
 <div class="t1 title"> titulo </div>
-```
-HTML: 
-```HTML:
 <div class="t2 title"> titulo </div>
 ```
 CSS:
 ```CSS 
 .title {}
-```
-CSS:
-```CSS 
+ 
 .t1 {}
-```
-CSS:
-```CSS 
+
 .t2 {}
 ```
 
@@ -56,17 +49,11 @@ CSS:
 CSS:
 ```CSS
  input:focus{} // Quando o elemento está em foco, campos de texto por exemplo
-```
-CSS:
-```CSS
+
  p:hover {} // Descansando o mouse em cima
-```
-CSS:
-```CSS
+
  input:disabled {} // Quando desabilitamos um campo
-```
-CSS:
-```CSS
+
  input:required {} // Quando o input é requerido
 ```
 
@@ -94,14 +81,24 @@ CSS:
 ## Adjacent sibling combinators
 Seleciona o elemento que é irmão na hierarquia
 HTML: 
-```HTML:<h1>TEXTO</h1> <p>TEXTO</p> <p>TEXTO</p> <p>TEXTO</p>```
-CSS:```CSS h1 + p {}```
+```HTML:
+<h1>TEXTO</h1> <p>TEXTO</p> <p>TEXTO</p> <p>TEXTO</p>
+```
+CSS:
+```CSS
+ h1 + p {}
+```
 
 ## General sibling combinators
 Seleciona todos os elementos irmãos
 HTML: 
-```HTML:<h1>TEXTO</h1> <p>TEXTO</p> <p>TEXTO</p> <p>TEXTO</p>```
-CSS:```CSS h1 ~ p {}```
+```HTML:
+<h1>TEXTO</h1> <p>TEXTO</p> <p>TEXTO</p> <p>TEXTO</p>
+```
+CSS:
+```CSS
+ h1 ~ p {}
+```
 
 ## Pseudo Classes
 
