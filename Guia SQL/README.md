@@ -116,19 +116,22 @@ FROM (nome da tabela A) as A
 FULL OUTER JOIN (nome da tabela B) B on A.coluna_relacional1 = B.coluna_relacional2
 
 
-## Comando:  LEFT OUTER JOIN Junta todas as informações da tabela A e coloca null onde não há correspondência com a tabela B
+## Comando:  LEFT OUTER JOIN 
+### Junta todas as informações da tabela A e coloca null onde não há correspondência com a tabela B
 SELECT (colunas desejadas para consulta ou * )
 FROM (nome da tabela) as A
  LEFT JOIN (nome da tabela B) B on A.coluna_relacional1 = B.coluna_relacional2
 
 
-## Comando: SELF JOIN Relaciona dados de uma mesma tabela
+## Comando: SELF JOIN 
+### Relaciona dados de uma mesma tabela
 SELECT (colunas desejadas para consulta ou * )
 FROM (nome da tabela) as A, (nome da tabela) as B
 WHERE A.coluna = B.coluna
 
 
-## Comando:  UNION Junta duas pesquisas de select em um resultado
+## Comando:  UNION 
+### Junta duas pesquisas de select em um resultado
 SELECT (colunas desejadas para consulta ou * )
 FROM (nome da tabela) 
 UNION //existe a opção de UNION ALL//
@@ -148,7 +151,8 @@ FROM (nome da tabela)
 Funções matemáticas Funções matemáticas
 
 
-## Comando:  SUBQUERY Usa uma outra tabela para fazer um subseleção nos dados
+## Comando:  SUBQUERY 
+### Usa uma outra tabela para fazer um subseleção nos dados
 SELECT (colunas desejadas para consulta ou * )
 FROM (nome da tabela) 
 WHERE NomeDaColuna IN (SELECT NomeDaColuna FROM (nome da tabela 2)

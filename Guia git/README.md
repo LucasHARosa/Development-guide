@@ -73,3 +73,5 @@
 - Quando já existe a branch main
 ## git pull
 - Puxando alterações do repositório para a máquina 
+## git clone <endereço>
+- copia um código do github para a máquina

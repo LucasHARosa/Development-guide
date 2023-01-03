@@ -1,19 +1,18 @@
 # Ambiente
 
 ## REPL
-    Escreve javascript direto no terminal
+Escreve javascript direto no terminal
     
 ### Iniciar
     node: inicia o javascript no terminal
     node console.js: inicia o javascript de um arquivo no terminal
     node console.js lucas henrique: adiciona no process.argv dois argumentos
     node console --name "Lucas Henrique": adiciona no process.argv dois argumentos '--name' e 'Lucas Henrique'
-
     Sair: .exit
 
 
 
-# iniciando
+# Iniciando
 
 ## Para puxar módulos 
 ```javascript
@@ -49,6 +48,7 @@
     Faz o upgrade nos pacotes
 ## npm i nome_da_pacotes@latest
     Instala a última versão
+    
 # process
 
 ## Para puxar informações do process na linha de execução
@@ -72,7 +72,7 @@
 # Timers
 
 ## setTimeout
-    Define o tempo de espera para realizar uma função. Recebe dois argumentos. 1° é a função que será executada, 2° são os milisegundos de espera
+Define o tempo de espera para realizar uma função. Recebe dois argumentos. 1° é a função que será executada, 2° são os milisegundos de espera
 
 ```javascript
     const finished = ()=>{ console.log("done!")}
@@ -82,7 +82,7 @@
 ```
 
 ## clearTimeout
-    Recebe um Timeout como argumento e cancela sua execução no kernel
+Recebe um Timeout como argumento e cancela sua execução no kernel
 
 ```javascript
     const finished = ()=>{ console.log("done!")}
@@ -91,7 +91,7 @@
 ```
 
 ## setInterval
-    Define um intervalo de tempo que será executada uma função. Recebe dois argumentos. 1° é a função que será executada, 2° são os milisegundos de espera
+Define um intervalo de tempo que será executada uma função. Recebe dois argumentos. 1° é a função que será executada, 2° são os milisegundos de espera
 
 ```javascript
     const periodic = ()=>{ console.log("hello!")}
@@ -101,7 +101,7 @@
 ```
 
 ## clearInterval
-    Cancela o timer de intervalo. Recebe um Interval como argumento.
+Cancela o timer de intervalo. Recebe um Interval como argumento.
 
 ```javascript
     const periodic = ()=>{ console.log("hello!")}
@@ -115,7 +115,7 @@
 # Events
 
 ## EventEmitter
-    Função do tipo classe
+Função do tipo classe
 
 ```javascript
     // extraindo de events o EventEmitter
@@ -125,7 +125,7 @@
 ```
 
 ## .emit
-    Função para emitir eventos
+Função para emitir eventos
 
 ```javascript
     // emissor de eventos. Primeiro argumento é o nome do evento
@@ -134,7 +134,7 @@
     eventEmitter.emit('saySomethig',"Lucas");
 ```
 ## .on
-    Função para ouvir a emissão de eventos
+Função para ouvir a emissão de eventos
 
 ```javascript
     // recebidor de eventos. Primeiro argumento é o nome do evento, segundo argumento é a função a ser executada
@@ -143,7 +143,7 @@
 ```
 
 ## .once
-    Função para ouvir a emissão de eventos uma única vez
+Função para ouvir a emissão de eventos uma única vez
 ```javascript
     // recebidor de eventos. Primeiro argumento é o nome do evento, segundo argumento é a função a ser executada
     eventEmitter.once('saySomethig', () => {console.log("Ouvindo")});
