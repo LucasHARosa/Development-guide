@@ -23,7 +23,7 @@
 ## git mv <file> caminho/<file>
 - Movendo entre pastas
 
-# Afundo
+# Funções profundas
 ## git restore <file>
 - Voltar alterações do working
 
@@ -62,7 +62,7 @@
 
 
 
-# github
+# Github
 ## git branch -M main
 - Trocar o nome de master para main
 ## git remote add origin git@github.com:LucasHARosa/Development_guide.git
