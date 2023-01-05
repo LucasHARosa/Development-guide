@@ -127,11 +127,11 @@ OBS1: Podemos colocar variáveis e objetos juntos no mesmo array
 
 .sort(); //Ordena os elementos do array
 
-.map((value) => { // Retorna um array modificando cada elemento do array, Recebe como argumento uma função
-    return value *2; // value é cada elemento do array
-})
+.forEach((elemento,posição,array)=>{}); //Trabalhar com um for de maneira mais fácil, pode receber de 1 a 3 argumentos
 
-.map(value => value * 2); // Arrow function permite
+.map((elemento,posição,array) => {}); // Retorna um array modificando cada elemento do array, Recebe como argumento uma função
+    
+.map(elemento => elemento * 2); // Arrow function permite
 
 let aluno = alunos.find(function(aluno) { // Em um array de alunos se procura o aluno joão. Retorna o primeiro elemento com nome joão
     return aluno.nome === 'joão';
@@ -313,6 +313,7 @@ for(let proprietys in autor){
     Rejected: A promessa foi rejeitada, houve um erro
     Settled: Seja com sucesso ou erro, ela foi finalmente concluída
 
+
 ```js
 let aceitar = true
 const promessa = new Promise((resolve, reject) => {
@@ -326,7 +327,8 @@ promessa
 	.catch(erro => console.log(erro)) // .catch pega o erro da Promise. Se "aceitar" for false vai imprimir pedido negado
 	.finally(() => console.log('finalizada')) // Vai imprimir finalizada independente de "aceitar"
 ```
-### async
+
+### Async
 Async é um tipo de função que executa de maneira assíncrona
 O último código apresentado pode ser realizado da seguinte forma:
 
@@ -362,327 +364,32 @@ fetch('https://api.github.com/users/maykbrito')
 .then(r => console.log(r))
 .catch(erro => console.log(erro.message));
 ```
-
-
-
-# DOM
-
-## selecionando elementos
-
+### Async
 ```js
-    document.getElementById("name"); // Seleciona o elemento a partir do id. Retorna um element
-
-    document.getElementByClassName("name"); // Seleciona o elemento a partir da classe. Retorna um HTMLCollection
-
-    document.getElementByTagName("name"); // Seleciona o elemento a partir do tag name. Retorna um HTMLCollection
-
-    document.querySelector("#name"); // Seleciona o elemento a partir do seletor CSS. Retorna um element
-
-    document.querySelectorAll(".name"); // Seleciona todos os elementos a partir do seletor CSS. Retorna um NodeList  
-```
-
-## Manipulando conteúdos
-```js
-    let element = document.querySelector("h1");
-
-    element.textContent += " Olá"; // Manipula o texto do elemento
-
-    element.innerText = "Olá"; // Troca o texto do elemento
-
-    element.innerHTML = "<strong> Hola! </strong>"; // Adiciona conteúdo HTML pelo js
-
-    // input
-
-    let input = document.querySelector("input"); 
-
-    input.value = "Valor que eu quiser"; // Atribuimos a variável o valor do input no js e no html
-
-    // Atributos
-
-    const header = document.querySelector("header"); 
-
-    header.setAttribute("id", "header"); // Coloca um atributo no elemento
-
-    header.getAttribute("id"); // Retorna o valor do atributo id
-
-    header.removeAttribute("id"); // Remove o atributo id do elemento
-
-    // CSS
-```
-
-## Navegando pelos elementos
-
-```js
-    const body = document.querySelector("body");
-
-    body.parentElement; // Pega o elemento pai
-    body.parentNode; // Pega o nó pai
-
-    body.childNodes; // Retorna um NodeList com todos elementos filhos, pega espaços vazios
-    body.children; // Retorna um HTMLCollection com as tags filhas, sem espaços vazios
-
-    body.firstChild; // Primeiro elemento filho, conta espaços vazios
-    body.firstElementChild; // Primeira tag filha, sem contar espaços vazios
-
-    body.lastChild; // último elemento filho, conta espaços vazios
-    body.lastElementChild; // última tag filha, sem contar espaços vazios
-
-    body.nextSibling; // Proxímo irmão, conta espaços vazios
-    body.nextElementSibling; // Proxímo irmão, sem contar espaços vazios
-
-    body.prevSibling; // Irmão anterior, conta espaços vazios
-    body.prevElementSibling; //Irmão anterior, sem contar espaços vazios
-    
-```
-
-## Adicionando elementos a página
-
-Tendo esse Arquivo HTML:
-```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <header>
-            <h1>Blog</h1>
-        </header>
-        <script src="./manual.js"></script>
-    </body>
-    </html>
-```
-```js
-    const div = document.createElement("div");
-    div.innerText = "Olá"; 
-    const body = document.querySelector("body");
-
-    body.append(div); // Coloca o elemento div após o último filho <script>
-
-    body.prepend(div); // Coloca o elemento div antes do primeiro filho <header>
-
-    body.insertBefore(div, body.lastChild); // 1° argumento = elemento, 2° argumento = posição. Coloca o elemento antes da posição desejada
-
-```
-
-## Eventos
-
-### Por HTML
-```html
-    <h1 onclick="nome_da_função()">Frase</h1>
-    <h1 ondrag="nome_da_função()">Frase</h1>
-    <h1 onmouseover="nome_da_função()">Frase</h1>
-    <h1 onqualquercoisa="nome_da_função()">Frase</h1>
-```
-```js
-    function nome_da_função(){
-        //escopo da função
+async function start(){
+    try{
+        const response = await fetch('https://api.github.com/users/maykbrito')
+        const user = await response.json();
+        const reposResponse = await  fetch(user.repos_url);
+        console.log(reposResponse);
+    } catch(e){
+        console.log(e);
     }
+}
+start()
 ```
 
-### Via js
+## Axios
 
-```html
-    <input type="text">
-```
-```js
-    const input = document.querySelector("input");
-    input.onkeydown = function (event){
-        //escopo da função
-        // Nesse event temos diversos métodos que podem retornar inúmeros elementos
-    }
-    input.onkeyup = function (event){
-        //escopo da função
-    }
-```
+Biblioteca que tem uma estrututra de promisses e funciona como o fetch
 
 ```js
-    const h1 = document.querySelector("h1");
-    
-    h1.addEventListener("click",nome_da_função);
-
-    h1.addEventListener("mouseover",nome_da_função);
-
-    h1.addEventListener("keydown",nome_da_função);
-
-    function nome_da_função (){
-        //escopo da função
-    }
+import axios from "axios";
+axios.get('/')
+.then(res=>{
+    console.log(res.data);
+})
 ```
 
-# NodeJS
-
-## REPL
-Escreve javascript direto no terminal
-    
-### Iniciar
-    node: inicia o javascript no terminal
-    node console.js: inicia o javascript de um arquivo no terminal
-    node console.js lucas henrique: adiciona no process.argv dois argumentos
-    node console --name "Lucas Henrique": adiciona no process.argv dois argumentos '--name' e 'Lucas Henrique'
-    Sair: .exit
 
 
-
-## Iniciando
-
-### Para puxar módulos 
-```javascript
-    const path = require('path') //Puxa uma informação de um módulo
-```
-
-### Para empurrar módulos
-```javascript
-    module.exports = "Olá"; // cria um módulo de exportação
-
-    const myModule = require("./exports.js"); // Supondo que exista um arquivo com esse módulo acima criado que se chama exports.js, a forma de puxar esse modulo é por um required com o caminho do arquivo
-```
-
-## npm
-
-### npm init
-    Iniciar o npm
-### npm install nome_do_pacotes
-    Baixa um modulo
-### npm run test
-    roda o test do package.json
-### npm install nome_do_pacotes -g
-    Instala os pacotes globalmente
-### npm root -g
-    Vê onde estão todas as extensões globais
-### npm uninstall nome_da_pacotes -g
-    desinstala os pacotes globalmente
-### npm i nome_da_pacotes@x.x.x
-    Muda a versão do pacote
-### npm outdated
-    Vê as versões dos pacotes instalados
-### npm upgrade
-    Faz o upgrade nos pacotes
-### npm i nome_da_pacotes@latest
-    Instala a última versão
-    
-## process
-
-### Para puxar informações do process na linha de execução
-```javascript
-    process; // Objeto global. Um dos argumentos é o ARGV, que possui os argumentos passados na execução
-    const argumentosDaExecucao = process.argv; // array de argumentos do process 
-```
-### Printf
-```javascript
-    process.stdout.write("Alguma informação\n");
-```
-
-### Scanf
-```javascript
-    process.stdin.on("data", data =>{ // .on deixa a função pegando sempre as entradas do usuário, entradas do tipo "data". O segundo argumento é a execução de um função assim que o usuário digite dados
-        process.stdout.write(data.toString().trim()+"\n");// .trim() remove espaços vazios
-        process.exit();
-    })
-```
-
-## Timers
-
-### setTimeout
-Define o tempo de espera para realizar uma função. Recebe dois argumentos. 1° é a função que será executada, 2° são os milisegundos de espera
-
-```javascript
-    const finished = ()=>{ console.log("done!")}
-    // 3000 ms de timeout
-    setTimeout(finished,3000);
-
-```
-
-### clearTimeout
-Recebe um Timeout como argumento e cancela sua execução no kernel
-
-```javascript
-    const finished = ()=>{ console.log("done!")}
-    const time = setTimeout(finished,3000);
-    clearTimeout(time);
-```
-
-### setInterval
-Define um intervalo de tempo que será executada uma função. Recebe dois argumentos. 1° é a função que será executada, 2° são os milisegundos de espera
-
-```javascript
-    const periodic = ()=>{ console.log("hello!")}
-    // 1000 ms de intervalo
-    setInterval(periodic,1000);
-
-```
-
-### clearInterval
-Cancela o timer de intervalo. Recebe um Interval como argumento.
-
-```javascript
-    const periodic = ()=>{ console.log("hello!")}
-    // 1000 ms de intervalo
-    let intervalo = setInterval(periodic,1000);
-
-    setTimeout(()=>{ clearInterval(intervalo)},4000);
-
-```
-
-## Events
-
-### EventEmitter
-Função do tipo classe
-
-```javascript
-    // extraindo de events o EventEmitter
-    const {EventEmitter} = require('events');
-    // criando um novo emissor de eventos
-    const eventEmitter = new EventEmitter();
-```
-
-### .emit
-Função para emitir eventos
-
-```javascript
-    // emissor de eventos. Primeiro argumento é o nome do evento
-    eventEmitter.emit('saySomethig');
-    // pode ter um ou dois parâmetros. O segundo parâmetro são os argumentos da função
-    eventEmitter.emit('saySomethig',"Lucas");
-```
-### .on
-Função para ouvir a emissão de eventos
-
-```javascript
-    // recebidor de eventos. Primeiro argumento é o nome do evento, segundo argumento é a função a ser executada
-    eventEmitter.on('saySomethig', () => {console.log("Ouvindo")});
-
-```
-
-### .once
-Função para ouvir a emissão de eventos uma única vez
-```javascript
-    // recebidor de eventos. Primeiro argumento é o nome do evento, segundo argumento é a função a ser executada
-    eventEmitter.once('saySomethig', () => {console.log("Ouvindo")});
-
-```
-
-### Como herdar o event emitter para qualquer classe
-```javascript
-    // extraindo inherits de util
-    const {inherits} = require('util');
-    // extraindo de events o EventEmitter
-    const {EventEmitter} = require('events');
-    // criando uma nova função classe
-    function Pessoa (name){
-        this.name = name;
-    }
-    //atribuindo as propriedades do EventEmitter a pessoa
-    inherits(Pessoa, EventEmitter);
-    //Criando uma pessoa
-    const lucas = new Pessoa("Lucas");
-    //Ouvindo o evento chama
-    lucas.on('chama',()=>{console.log("bem vindo "+lucas.name)});
-    console.log("Opa cheguei!");
-    //emitido o evento chama
-    lucas.emit('chama');
-
-```

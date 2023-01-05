@@ -1,5 +1,7 @@
 # DOM
 
+Forma de modificar o html a partir do javascript
+
 ## selecionando elementos
 
 ```js

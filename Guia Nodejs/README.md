@@ -27,9 +27,11 @@ Escreve javascript direto no terminal
 ```
 
 # npm
-
+Gerenciador de pacotes do node
 ## npm init
-    Iniciar o npm
+    Iniciar o npm cirando o package.json
+## npm init -y
+    Cria o package.jason automaticamente
 ## npm install nome_do_pacotes
     Baixa um modulo
 ## npm run test

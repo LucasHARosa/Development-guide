@@ -47,5 +47,6 @@ app.get('/sobre', (req, res) => {
 });
 
 // Servidor fica rodando na máquina na porta 8080 (localhost:8080)
-app.listen(8080);
+// Devemos rodar o projeto como "node server.js"
+app.listen(8080); 
 console.log("Servidor fica rodando na máquina na porta")

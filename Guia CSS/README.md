@@ -167,6 +167,7 @@ Podemos adicionar elementos HTML pelo CSS
 
 
 ## Referências
+
 https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
 https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 -----------------------------------------------------------------------------------
