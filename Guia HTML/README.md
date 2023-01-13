@@ -23,9 +23,9 @@
 
 
 # imagem
-    Contém atributos HTML (informações extras e configurações):
-        src: onde a imagem está
-        alt: texto alternativo
+Contém atributos HTML (informações extras e configurações):
+    src: onde a imagem está
+    alt: texto alternativo
 
 ```html
 <p style="color: rgb(109, 109, 109);">--------------------------------------------------------</p>
@@ -57,14 +57,14 @@
 
 # Atributos mais usados
     
-    -class="": classifica um bloco para um determinado tipo
-    -contenteditable="": habilita a edição da página
-    -data-*
-    -hiden: esconde o conteúdo
-    -id="": identificador, 1 por página
-    -style="": muda o estilocss
-    -tabindex: 
-    -title="": define um título
+- class="": classifica um bloco para um determinado tipo
+- contenteditable="": habilita a edição da página
+- data-*
+- hiden: esconde o conteúdo
+- id="": identificador, 1 por página
+- style="": muda o estilo css
+- tabindex: 
+- title="": define um título
 
 ```html
 <div class="verde" contenteditable="true" data-id="" id="1" style="color:aqua"> 
