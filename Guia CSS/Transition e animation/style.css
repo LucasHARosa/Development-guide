@@ -75,7 +75,7 @@ footer{
 }
 @keyframes example-one{
     0%{
-        background-color: blueviolet;
+        background-color: rgb(226, 186, 43);
         top: 0;
         left: 0vw;
     }
