@@ -63,14 +63,14 @@
     -tabindex: 
     -title="": define um título
 -->
-<div class="verde" contenteditable="true" data-id="" id="1" style="color:aqua"> 
+<div class="verde" contenteditable="true" data-id="" id="1" style="color:aqua" tabindex="2"> 
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et iusto nesciunt placeat ratione illum repellendus atque ipsum. Dolorem a laborum voluptate tempore vero nemo aspernatur accusantium unde facilis accusamus. 
 </div>
 
 <div tabindex="1">
     indica que a ordem do conteúdo por meio do tab
 </div>
-<div title="titulo do texto" style="color: #309900;">
+<div title="titulo do texto" tabindex="3" style="color: #309900;">
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam error dignissimos libero, ipsa, porro id eum tempora facilis inventore temporibus corrupti nemo cum quod labore? Voluptate nostrum est quo laboriosam.
 </div>
 
@@ -263,37 +263,32 @@
         </figure>        
 
         
-
+Exemplos de cada mídia:
 -->
-<!-- Exemplos de cada mídia:
+ 
 
 <h2>Midias</h2>
 <video 
-    src="../assets-example/rocket.mp4" 
+    src="./assets-example/Oceano - 135658.mp4" 
     controls
     width="500"
     height="300"
     autoplay
     preload="metadata"
-    poster="../assets-example/ball.png"
+    poster="./assets-example/tela.png"
     >
         <p>Não suporta video</p>  
 </video>
 
 <audio controls>
-    <source src="../assets-example/viper.mp3" type="audio/mp3">
+    <source src="./assets-example/viper.mp3" type="audio/mp3">
     <source src="../assets-example/viper.ogg" type="audio/ogg">
     <p>Não suporta audio</p>
 </audio>
 
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/XWHDX914vYQ" title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-    >
-</iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XQ55yZJEuN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 
 <figure>
@@ -307,7 +302,7 @@
     </a>
     <figcaption>Imagem de um leão</figcaption>
 </figure>
--->
+
 
 <!--
     Input:
@@ -428,8 +423,7 @@
         <div>
         <!-- name: agrupa as as caixas | value: nome recebido caso a caixa seja marcada -->
             <input type="checkbox" name="interest" id="lista" value="notificação">
-            <label for="notificação">Ativas as notificações</label>
-            
+            <label for="notificação">Ativas as notificações</label>   
         </div>
         <div>
             <input type="checkbox" name="interest" id="lista" value="lista" checked>
@@ -463,9 +457,9 @@
 <datalist id="fruta">
     <option value="banana">banana</option>
     <option value="tomate">tomate</option>
-    <option value="kiwi"></option>
-    <option value="abacaxi"></option>
-    <option value="nuca"></option>
+    <option value="kiwi">kiwi</option>
+    <option value="abacaxi">abacaxi</option>
+    <option value="melao">melao</option>
 </datalist>
 
 
