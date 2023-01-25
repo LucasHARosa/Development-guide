@@ -12,7 +12,6 @@
 * &lt;abbr&gt; : Usado para explicar abreviações
 * &lt;pre&gt;: Preserva os espaços em branco do texto
 * &lt;style&gt;: Coloca CSS direto no arquivo HTML
-
 ## Formatação 
 * &lt;b&gt;- Texto em negrito
 * &lt;strong&gt;- Texto importante
