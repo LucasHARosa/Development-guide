@@ -28,7 +28,7 @@ CSS:
 ## ID Selector
 HTML: 
 ```HTML
-<div class="title" id="my-1"> titulo </div>
+<div id="my-1"> titulo </div>
 ```
 CSS:
 ```CSS 
