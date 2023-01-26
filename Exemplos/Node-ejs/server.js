@@ -11,28 +11,32 @@ app.set("view engine", "ejs")
 app.get('/', (req, res) => {
     const itens = [
         {
-            id: "D",
-            name: ' Desenvolvimento',
+            id: "E",
+            name: ' xemplo',
+        },
+        {
+            id: "X",
+            name: '',
         },
         {
             id: "E",
-            name: ' Estudar',
+            name: '',
         },
         {
             id: "M",
-            name: ' Muito',
+            name: '',
         },
         {
-            id: "A",
-            name: ' Amar',
+            id: "P",
+            name: '',
         },
         {
-            id: "I",
-            name: ' Itaú',
+            id: "L",
+            name: '',
         },
         {
-            id: "S",
-            name: ' Samambaia',
+            id: "O",
+            name: '',
         }
     ]
     const subtitle = "Uma linguagem de modelagem para a criação de uma página HTML utilizando JS"
@@ -49,4 +53,4 @@ app.get('/sobre', (req, res) => {
 // Servidor fica rodando na máquina na porta 8080 (localhost:8080)
 // Devemos rodar o projeto como "node server.js"
 app.listen(8080); 
-console.log("Servidor fica rodando na máquina na porta")
+console.log("Servidor fica rodando na máquina na porta 8080")
