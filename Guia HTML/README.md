@@ -740,3 +740,5 @@ Atributos:
 ```
 * button: Representa um botão, é usado par enviar formulários
 
+<hr>
+
